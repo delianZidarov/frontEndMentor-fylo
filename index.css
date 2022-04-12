@@ -144,6 +144,9 @@ main {
   opacity: 0.5;
 }
 @media (min-width: 1440px) {
+  :root {
+    --progress-bar-width: 461px;
+  }
   body {
     background-image: url("./images/bg-desktop.png");
     background-repeat: no-repeat;
@@ -156,6 +159,39 @@ main {
     width: 24.306vw;
   }
   .information-container {
+    align-items: flex-start;
     width: 37.5vw;
+    height: 154px;
+  }
+  .information-container h2 {
+    padding-left: var(--main-container-items-padding);
+  }
+  .progress-bar-container {
+    padding-left: var(--main-container-items-padding);
+  }
+  .space-left-indicator {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(0px - var(--space-left-box-height) * 0.6);
+    left: calc(
+      var(--main-container-items-padding) + var(--progress-bar-width) -
+        var(--space-left-box-width)
+    );
+    height: var(--space-left-box-height);
+    width: var(--space-left-box-width);
+    border-radius: 10px 10px 0px 10px;
+    background-color: white;
+  }
+  .space-left-indicator::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -22px;
+
+    border-color: white white transparent transparent;
+    border-style: solid;
+    border-width: 11.35px;
   }
 }
