@@ -17,6 +17,11 @@
   --main-container-border-radius: 10px 100px 10px 10px;
   --main-container-width: 86.935vw;
   --main-container-items-padding: 41px;
+  --progress-bar-height: 14px;
+  --progress-bar-width: 262px;
+  --progress-bar-padding: 3px;
+  --space-left-box-width: 179px;
+  --space-left-box-height: 72px;
 }
 footer {
   position: absolute;
@@ -35,6 +40,7 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  font-family: var(--font);
   gap: 1rem;
 }
 .main-container {
@@ -68,10 +74,74 @@ main {
   border-radius: var(--border-radius);
 }
 .information-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
   width: var(--main-container-width);
   height: 23.99vh;
   background-color: var(--background-color);
   border-radius: var(--border-radius);
+}
+.information-container h2 {
+  font-size: var(--font-size);
+  font-weight: 400;
+  color: var(--text-color);
+}
+.progress-bar {
+  box-sizing: content-box;
+  width: var(--progress-bar-width);
+  height: var(--progress-bar-height);
+  padding: var(--progress-bar-padding);
+  border-radius: var(--border-radius);
+  background-color: var(--dark-background-color);
+}
+
+.progress {
+  position: relative;
+  width: 81.5%;
+  height: var(--progress-bar-height);
+  border-radius: 8px;
+  background: linear-gradient(270deg, #ff4a95 0%, #ffa197 100%);
+}
+.progress::after {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  top: calc(50% - 10px / 2);
+  right: 2px;
+  border-radius: 50%;
+  background-color: white;
+}
+.progress-bar-legend {
+  display: flex;
+  justify-content: space-between;
+  width: var(--progress-bar-width);
+  color: var(--text-color);
+}
+.space-left-indicator {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: calc(0% - var(--space-left-box-height) / 2);
+  left: calc(50% - var(--space-left-box-width) / 2);
+  height: var(--space-left-box-height);
+  width: var(--space-left-box-width);
+  border-radius: var(--border-radius);
+  background-color: white;
+}
+.number {
+  font-weight: 700;
+  font-size: 40px;
+}
+.description {
+  font-weight: 400;
+  font-size: 12px;
+  opacity: 0.5;
 }
 @media (min-width: 1440px) {
   body {
