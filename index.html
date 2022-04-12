@@ -52,14 +52,21 @@
       </nav>
     </header>
     <main>
-      <div>
-        <p>You’ve used 815 GB of your storage</p>
-        <h2>185 GB Left</h2>
-        <div>
-          <div></div>
+      <div class="usage-display-container">
+        <p>You’ve used <strong>815 GB</strong> of your storage</p>
+        <div class="title-container">
+          <h2><span class="number">185<span></span><span class="description"> GB LEFT</span></h2>
         </div>
-        <p>0 GB</p>
-        <p>1000 GB</p>
+        <div class="usage-bar-container">
+          <div class="usage-bar">
+            <div class="progress"></div>
+          </div>
+          <div class="usage-bar-legend">
+           <span>0 GB</span>
+           <span>1000 GB</span>
+           </div>
+        </div>
+       
       </div>
     </main>
     <footer>
@@ -67,7 +74,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Delian</a>.
       </div>
     </footer>
   </body>
