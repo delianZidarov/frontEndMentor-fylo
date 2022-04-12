@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --fill-color: #0c122c;
+  --background-color: #1e2d69;
+  --font-size: 14px;
+  --header-radius: 10px 100px 10px 10px;
+
+  --nav-icon-border-radius: 0.625rem;
+  --nav-icon-width: 48.15px;
+  --nav-icon-height: 48px;
+
+  --header-padding: 2.5625rem;
+  --header-width: 86.934vw;
+  --header-height: 30.135vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: var(--font-size);
+  background: url("./images/bg-mobile.png");
+  background-repeat: none;
+  background-position: center;
+}
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: var(--header-padding);
+  width: var(--header-width);
+  height: var(--header-height);
+  border-radius: var(--header-radius);
+  background-color: var(--background-color);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--nav-icon-width);
+  height: var(--nav-icon-height);
+  border-radius: var(--nav-icon-border-radius);
+  background-color: var(--fill-color);
+}
