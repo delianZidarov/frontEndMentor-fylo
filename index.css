@@ -34,6 +34,7 @@ body {
   height: 100vh;
   background-color: var(--dark-background-color);
   background-image: url("./images/bg-mobile.png");
+  background-size: 100% 100%;
 }
 main {
   display: flex;
@@ -151,6 +152,7 @@ main {
     background-image: url("./images/bg-desktop.png");
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100% 50%;
   }
   main {
     align-items: flex-end;
